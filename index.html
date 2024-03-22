@@ -21,17 +21,27 @@
         </div>
     </header>
     <main>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="nameInputBox" placeholder="Enter a Name">
-                <button class="btn btn-success mb-3" type="button" id="selectNameButton">Pick a Random Name</button>
-                <div id="selectedNameDiv"></div>
+        <div class="container d-flex justify-content-center align-items-end vh-100">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="nameInputBox" placeholder="Enter a Name">
+                    </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary w-100" type="button" onclick="addName()">Add Name</button>
+                        </div>
+                    
+                    <div class="mb-3">
+                        <button class="btn btn-success mb-3" type="button" id="selectNameButton">Pick a Random
+                            Name</button>
+                    </div>
+                    <div id="nameDisplayDiv" class="mb-3"></div>
+
+                    <div id="selectedNameDiv"></div>
+
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
 
 
