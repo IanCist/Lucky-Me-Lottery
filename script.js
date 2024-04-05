@@ -48,6 +48,12 @@ function pickRandomName () {
     displayNames()
 }
 
+// Add event listener for Entery key press
+document.getElementById('nameInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        addName();
+    }
+});
 
 
 
