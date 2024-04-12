@@ -13,12 +13,12 @@ function displayNames() {
     const nameList = document.getElementById('nameList')//Get UL element
     nameList.innerHTML = ''
 
-    for (let i = 0; i < nameArray.length; i++){
+    for (let i = 0; i < nameArray.length; i++) {
         const name = nameArray[i]//get the curret name from the array
-        
-        
+
+
         const li = document.createElement('li')
-        li.className='list-group-item'
+        li.className = 'list-group-item'
 
         const span = document.createElement('span')
         span.textContent = name
@@ -33,23 +33,27 @@ function displayNames() {
 
 }
 
-function pickRandomName () {
-    const randomNameDiv = document.getElementById('randomName')
-    randomNameDiv.textContent = ''
+function pickRandomName() {
+    const randomNameDiv = document.getElementById('randomName');
+    randomNameDiv.textContent = '';
 
+    const randomNumber = Math.floor(Math.random() * nameArray.length);
+    const randomName = nameArray[randomNumber];
 
-    const randomNumber = Math.floor(Math.random() * nameArray.length)
-    const randomName = nameArray[randomNumber]
+   
+    const strongElement = document.createElement('strong');
+    strongElement.textContent = randomName;
 
-    randomNameDiv.textContent = randomName
+    
+    randomNameDiv.appendChild(strongElement);
 
-    nameArray.splice(randomNumber, 1)
+    
+    nameArray.splice(randomNumber, 1);
 
-    displayNames()
+    displayNames();
 }
-
 // Add event listener for Entery key press
-document.getElementById('nameInput').addEventListener('keypress', function(e) {
+document.getElementById('nameInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         addName();
     }
@@ -66,6 +70,6 @@ document.getElementById('pickRandomBtn').addEventListener('click', pickRandomNam
 
 
 
- 
+
 
 
