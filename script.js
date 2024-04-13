@@ -32,7 +32,7 @@ function displayNames() {
 
 
 }
-
+//Picks random name on click
 function pickRandomName() {
     const randomNameDiv = document.getElementById('randomName');
     randomNameDiv.textContent = '';
